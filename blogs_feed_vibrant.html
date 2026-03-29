@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#f0ede9",
+              "on-secondary-fixed-variant": "#4a614f",
+              "tertiary-fixed-dim": "#bbc1ef",
+              "tertiary-dim": "#4a5178",
+              "tertiary-container": "#c9cffe",
+              "on-primary-fixed": "#001d33",
+              "on-secondary": "#e8ffea",
+              "outline-variant": "#d2d5d8",
+              "on-tertiary-fixed-variant": "#484e76",
+              "primary-dim": "#2563eb",
+              "outline": "#71787e",
+              "on-primary-fixed-variant": "#004a77",
+              "secondary-fixed-dim": "#c2dbc5",
+              "surface-container-low": "#f8fafc",
+              "surface-container": "#f1f5f9",
+              "secondary-container": "#d0e9d3",
+              "on-error-container": "#6e0a12",
+              "secondary-dim": "#425847",
+              "primary-fixed": "#dbeafe",
+              "inverse-surface": "#1e293b",
+              "surface": "#ffffff",
+              "on-tertiary-fixed": "#2b3257",
+              "inverse-primary": "#93c5fd",
+              "primary": "#2563eb",
+              "secondary-fixed": "#d0e9d3",
+              "on-primary-container": "#001d3d",
+              "on-tertiary-container": "#3e456c",
+              "error": "#dc2626",
+              "on-background": "#0f172a",
+              "background": "#ffffff",
+              "primary-fixed-dim": "#bfdbfe",
+              "tertiary": "#4f46e5",
+              "surface-container-high": "#e2e8f0",
+              "error-container": "#fee2e2",
+              "surface-bright": "#ffffff",
+              "on-secondary-container": "#415746",
+              "surface-tint": "#2563eb",
+              "error-dim": "#ef4444",
+              "inverse-on-surface": "#f1f5f9",
+              "surface-container-highest": "#cbd5e1",
+              "on-secondary-fixed": "#2f4434",
+              "on-surface-variant": "#475569",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#e0e7ff",
+              "on-error": "#ffffff",
+              "primary-container": "#dbeafe",
+              "on-surface": "#0f172a",
+              "secondary": "#475569",
+              "surface-variant": "#f1f5f9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "3xl": "2rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen">
+<!-- TopAppBar Component -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary/10">
+<img class="w-full h-full object-cover" data-alt="professional headshot of a smiling young woman with warm lighting and a soft bokeh academic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO9MUbz27lwz5pWbFz8egfQimUBW5aIUdRa8rPiGjta7NWb5Om1tHGsDpkWC_FGM5WnrYnL1XHYBOFTWQcHjhsCtZZi94cz1cUBjwykFo4eTqjuBkPnJEq0sRBT3YRLSalzKtNyBU2zQzv6WC2xoD4tge7A0zfHV0Zg_9kqCaCO3q4OvVNJM0f9-YZNmiUO_H3odEynhMbrcV82qPWPr8pG3EwwJViaab4coiBt-GElb3tLCZcR57Qfi3gQCGdl9uY4uw0rzo8YTo"/>
+</div>
+<h1 class="font-manrope text-2xl font-black italic tracking-tighter text-blue-700 dark:text-blue-400">UnifyU</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-manrope font-bold text-lg">
+<a class="text-slate-500 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors px-4 py-2 rounded-xl" href="#">UniAI</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-4 border-blue-700 dark:border-blue-400 px-4 py-2" href="#">Blogs</a>
+<button class="material-symbols-outlined text-blue-700 dark:text-blue-400 p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all scale-95 active:scale-90">settings</button>
+</nav>
+<div class="md:hidden">
+<button class="material-symbols-outlined text-blue-700 dark:text-blue-400 p-2 rounded-full active:scale-95 transition-transform">settings</button>
+</div>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-6 pt-24 pb-32">
+<!-- Creator Section - UnifyU Kinetic Style -->
+<section class="mb-10">
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-3xl p-6 shadow-sm">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="portrait of a friendly female student wearing a light cream sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtCyapy9615ormM6o0Us0gC104p_wtH_LIkzM9CqZ2Qtina6uRlPg4hqdJb96kNQg4iQCJB05MvTjLnpPCn2Q3pQORVnxikO7FR_DtBhof2yPdt7j4kX1hYTxbXAK5KDI0wyAYP5QsBSy5Zj6fAC2ju_TcHCHanO3_uiTjpDtvQUAMRTQARgBV1ZvP9HsUFLS95Y6TpEH-oBS79BMjIeTAJw91SbJ-MgCt7UwPgiRYRKmimZC5KfYWCglldg6hnp2AmVx5E49xWLo"/>
+</div>
+<div class="flex-grow space-y-4">
+<textarea class="w-full bg-white border border-outline-variant/40 rounded-2xl p-4 text-on-surface-variant placeholder:text-slate-400 focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all resize-none shadow-inner" placeholder="What's on your mind?" rows="2"></textarea>
+<div class="flex justify-between items-center">
+<div class="flex gap-1">
+<button class="p-2.5 rounded-full text-primary hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="p-2.5 rounded-full text-primary hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button class="p-2.5 rounded-full text-primary hover:bg-primary-container transition-colors active:scale-95">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+</div>
+<button class="bg-primary hover:bg-primary-dim text-white font-bold px-8 py-3 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                            Post
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feed Section -->
+<div class="space-y-10">
+<!-- Featured Blog Post - Dynamic Kinetic Design -->
+<article class="group bg-white rounded-[2.5rem] overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-outline-variant/20">
+<div class="p-8 space-y-6">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-primary-fixed" data-alt="profile picture of a male student with short hair and glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdmygG4JDsJFKfEw_qLP3GkbafnBLj1xomFnEHVBovH7j6yVqLiDCEeIhqht0GhW4mQtVE3jF1PLJ3y_k-1Oi76cWmrBZJ6b9ko2ChxCV8LQXshNzx2-I1WptSWgN0sEmEcukUCfKQzr1unHXKLjQuN6xJ-hI_eZ2hbyYW5uAA8iOI9j427giriB_pIUx6uIo7x_iYZo4xInA0pxE090XqGSBw4FTGouANAIKDS4EjubmOlVpkt9q_9oSqdlV_NA_91-yYt543yu4"/>
+<span class="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5 shadow-sm text-xs">🇬🇧</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Julian Thorne</h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-sm font-medium">
+<span>London, UK</span>
+<span class="text-primary/40">•</span>
+<span>2h ago</span>
+</div>
+</div>
+</div>
+<span class="bg-blue-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm shadow-blue-200">Education</span>
+</div>
+<div class="space-y-4">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface leading-tight group-hover:text-primary transition-colors">7 Hidden Libraries in London for Deep Focus</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg font-medium">
+                        Finding a quiet spot in Central London can be a nightmare during finals. Last week I stumbled upon the Wellcome Collection library. It’s a game-changer...
+                    </p>
+</div>
+<div class="rounded-3xl overflow-hidden aspect-[16/9] relative shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="atmospheric view of a classic wooden library interior with rows of books and warm desk lamps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXOqQSmT3pWNBDxn7tBttxbQYIEJtxB7zf_V07qxXAolblI8OhBHR3ozbb7UlM0vJWtnXx4Rk5ziCygzNdXjqC0whDj8qzkAg23dLlMdJKNNItBnmY2XSWRSYdrygmR2hs3uCGA3FC3Zg8_suNDu5wVgV5DoIl710vvRXcBlt8rrDy1kJCKtUOIRfWPwYunM5eFC_Ftw8IRzyG9r9E96wPXjTJo8d1tsXHLSIQ3s-2SALEivpM0uTAyQ1bFIXzlCtB3qK-fpgB908"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex items-center gap-8 pt-4 border-t border-outline-variant/10">
+<button class="flex items-center gap-2.5 text-slate-500 hover:text-red-500 transition-all active:scale-90">
+<span class="material-symbols-outlined font-variation-settings-fill-0 group-hover:font-variation-settings-fill-1">favorite</span>
+<span class="text-sm font-bold">124</span>
+</button>
+<button class="flex items-center gap-2.5 text-slate-500 hover:text-primary transition-all active:scale-90">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-sm font-bold">18</span>
+</button>
+<button class="flex items-center gap-2.5 text-slate-500 hover:text-primary transition-all active:scale-90 ml-auto">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Text-based Blog Post - Warm Accent Style -->
+<article class="bg-surface-container-low border border-primary/10 rounded-[2.5rem] p-8 space-y-8 shadow-sm hover:shadow-lg transition-all">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-secondary-container" data-alt="profile of an international male student with a kind expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE54cXZRIzlYhEKM6lRdbhvzfM4RkpVZnnXHut7K46VuOGHzbP90GCvNhjQL61x_7LVd2UqA7e24g2WcfSpv3xkIE-ZWFp1VF6XUVVPiNY0CpYI3xDh2AMo7u0ZxcGSiHf_9phP2v4ORMQl5oaCoOkA59_Lw_br02GbsO0437usXxxZIoVvONEO3v0AVab2ZMkxucIYuPmkSMiBXPC2fLucdp68Wvsp9nBSAiijpe6eqyOfV42d2HLtaYUpCyu8Ba8vqIj8R8yOfA"/>
+<span class="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5 shadow-sm text-xs">🇪🇸</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface">Mateo Silva</h3>
+<div class="flex items-center gap-1.5 text-on-surface-variant text-sm font-medium">
+<span>Madrid, Spain</span>
+<span class="text-primary/40">•</span>
+<span>5h ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface leading-tight">Mastering Spanish History in 30 Days?</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                    I've been using UniAI to summarize my lecture notes on the Spanish Civil War. The way it connects socio-economic trends to political shifts is incredible. Has anyone else tried using it for history?
+                </p>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="bg-primary/10 text-primary border border-primary/10 px-5 py-2 rounded-full text-xs font-black tracking-widest uppercase">#History</span>
+<span class="bg-primary/10 text-primary border border-primary/10 px-5 py-2 rounded-full text-xs font-black tracking-widest uppercase">#UniAI</span>
+<span class="bg-primary/10 text-primary border border-primary/10 px-5 py-2 rounded-full text-xs font-black tracking-widest uppercase">#StudyGroup</span>
+</div>
+<div class="flex items-center gap-8 border-t border-outline-variant/20 pt-8">
+<button class="flex items-center gap-2.5 text-primary active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-sm font-bold">89</span>
+</button>
+<button class="flex items-center gap-2.5 text-slate-500 hover:text-primary transition-all">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-sm font-bold">42</span>
+</button>
+<button class="flex items-center gap-2.5 text-slate-500 hover:text-primary transition-all ml-auto">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</article>
+<!-- Bento Styled Mini Feed -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="text-xl">🇫🇷</span>
+<span class="text-[10px] font-black text-primary tracking-[0.2em] uppercase">Student Life</span>
+</div>
+<h4 class="text-xl font-bold leading-tight group-hover:text-primary transition-colors">Best affordable cafes near Sorbonne University...</h4>
+</div>
+<div class="mt-8 flex items-center justify-between border-t border-slate-200 pt-4">
+<span class="text-xs font-bold text-slate-400">by Amélie L.</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<div class="bg-primary text-white rounded-3xl p-8 flex flex-col justify-between hover:bg-primary-dim hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center gap-2 text-primary-fixed">
+<span class="material-symbols-outlined text-base">smart_toy</span>
+<span class="text-[10px] font-black tracking-[0.2em] uppercase">UniAI Tip</span>
+</div>
+<h4 class="text-xl font-bold leading-tight">How to prompt for complex math proofs...</h4>
+</div>
+<div class="mt-8 flex items-center justify-between border-t border-white/20 pt-4 relative z-10">
+<span class="text-xs font-bold text-primary-fixed">Tutorial</span>
+<span class="material-symbols-outlined text-primary-fixed group-hover:rotate-12 transition-transform">lightbulb</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Component -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl rounded-t-[2rem] shadow-[0_-4px_20px_rgba(0,0,0,0.05)] border-t border-outline-variant/10">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:scale-110 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1">smart_toy</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-widest">UniAI</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 rounded-full px-8 py-3 transition-all duration-300 hover:scale-110 active:scale-90 shadow-sm" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">rss_feed</span>
+<span class="font-manrope text-[11px] font-bold uppercase tracking-widest">Blogs</span>
+</a>
+</nav>
+</body></html>

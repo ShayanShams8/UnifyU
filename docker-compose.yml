@@ -1,0 +1,51 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-unifyu}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-unifyu_secret}
+      POSTGRES_DB: ${POSTGRES_DB:-unifyu_db}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-unifyu} -d ${POSTGRES_DB:-unifyu_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-unifyu}:${POSTGRES_PASSWORD:-unifyu_secret}@db:5432/${POSTGRES_DB:-unifyu_db}
+    volumes:
+      - posts_content:/app/posts_content
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      EXPO_PUBLIC_API_URL: http://localhost:8000
+      CI: "1"
+    ports:
+      - "8081:8081"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  posts_content:

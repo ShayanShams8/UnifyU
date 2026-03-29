@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UnifyU - UniAI Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2563eb", // Vibrant Blue
+              "secondary": "#fb7185", // Coral accent
+              "surface": "#ffffff",
+              "background": "#f8fafc",
+              "on-surface": "#0f172a",
+              "on-surface-variant": "#64748b",
+              "surface-container-low": "#f1f5f9",
+              "surface-container-highest": "#e2e8f0"
+            },
+            fontFamily: {
+              "manrope": ["Manrope", "sans-serif"],
+              "headline": ["Manrope", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "3xl": "2rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent),
+                        radial-gradient(circle at bottom left, rgba(251, 113, 133, 0.08), transparent);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col kinetic-gradient">
+<!-- TopAppBar (Component from COMPONENTS_6) -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden flex items-center justify-center border-2 border-primary/10">
+<img alt="User" data-alt="close-up portrait of a thoughtful student in a modern library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9SFZ_g5RNW0KrqXr5ajsVK6wQXlG28BoEhsuzCG4OL1RTdhap2Ienntv8dKi84J-vrIMV6cGHGU-sJWeVF5SIWlDLIJtPx-114dP8xZwXsAc9zfE91iGwngqDwb4yUvjlYjrR8JP1o8V7Fpw91UK76fWvV1-7uupRtOFsE7SfB9HvEZtPhO4FqE9lcJHoAgTLSXY_WC17E3ujT-qU7yehV3NP3gZEv7ain5tco9m5jCX38Sr3kTS9XIfKm4KVAg5JfGK0E6RdBzQ"/>
+</div>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-manrope font-bold text-lg tracking-tight text-blue-700 dark:text-blue-400" href="#">UniAI</a>
+<a class="font-manrope font-bold text-lg tracking-tight text-slate-500 dark:text-slate-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors px-3 py-1 rounded-lg" href="#">Blogs</a>
+</nav>
+<div class="text-2xl font-black italic tracking-tighter text-blue-700 dark:text-blue-400 font-headline">UnifyU</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors text-blue-600 dark:text-blue-400 scale-95 active:duration-150 active:scale-90">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-24 relative max-w-5xl mx-auto w-full">
+<!-- Welcome Hero Section -->
+<div class="flex flex-col items-center text-center space-y-8 mb-24">
+<div class="relative group">
+<div class="absolute -inset-8 blur-3xl opacity-30 bg-primary rounded-full group-hover:opacity-40 transition-opacity duration-1000 animate-pulse"></div>
+<div class="absolute -inset-8 blur-3xl opacity-20 bg-secondary rounded-full translate-x-8 translate-y-8 group-hover:opacity-30 transition-opacity duration-1000"></div>
+<h1 class="text-7xl md:text-9xl font-black italic tracking-tighter text-on-surface leading-none relative">
+                UnifyU
+            </h1>
+</div>
+<p class="text-on-surface-variant max-w-lg text-lg font-medium leading-relaxed font-manrope">
+            Your sanctuary for <span class="text-primary font-bold">mindful learning</span> and <span class="text-secondary font-bold">academic clarity</span>. How can I assist your educational journey today?
+        </p>
+<!-- Quick Suggestions Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl mt-12">
+<button class="flex flex-col items-start p-6 bg-white border border-slate-100 rounded-3xl hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 transition-all text-left group active:scale-[0.98]">
+<div class="p-3 bg-blue-50 rounded-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">auto_awesome</span>
+</div>
+<span class="text-on-surface font-extrabold text-lg font-manrope">Summarize complex theory</span>
+<span class="text-on-surface-variant text-sm mt-1">Break down concepts into simple metaphors</span>
+</button>
+<button class="flex flex-col items-start p-6 bg-white border border-slate-100 rounded-3xl hover:border-secondary/30 hover:shadow-xl hover:shadow-secondary/5 transition-all text-left group active:scale-[0.98]">
+<div class="p-3 bg-rose-50 rounded-2xl mb-4 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-white">edit_note</span>
+</div>
+<span class="text-on-surface font-extrabold text-lg font-manrope">Draft an essay outline</span>
+<span class="text-on-surface-variant text-sm mt-1">Structure your thoughts with academic rigor</span>
+</button>
+</div>
+</div>
+<!-- Spacer for input area -->
+<div class="h-40"></div>
+</main>
+<!-- Chat Input Fixed Wrapper -->
+<div class="fixed bottom-28 md:bottom-12 left-0 w-full px-6 z-40">
+<div class="max-w-3xl mx-auto">
+<div class="relative bg-white/90 backdrop-blur-2xl rounded-3xl border border-slate-200 p-2 flex items-center shadow-xl shadow-slate-200/50">
+<button class="p-3 text-slate-400 hover:text-primary hover:bg-slate-50 rounded-2xl transition-all">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<input class="bg-transparent border-none focus:ring-0 flex-grow px-4 text-on-surface placeholder:text-slate-400 font-semibold text-lg" placeholder="Message UniAI..." type="text"/>
+<button class="bg-primary text-white p-4 rounded-2xl flex items-center justify-center hover:bg-blue-700 hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+<p class="text-center text-[10px] text-slate-400 mt-4 font-manrope uppercase tracking-[0.2em] font-bold">
+            UniAI can make mistakes. Verify important information.
+        </p>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only - Component from COMPONENTS_6) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-2xl rounded-t-[2rem] shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 rounded-full px-6 py-2 transition-all duration-300 hover:scale-110 active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-widest mt-1">UniAI</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 transition-all hover:scale-110 active:scale-90" href="#">
+<span class="material-symbols-outlined">rss_feed</span>
+<span class="font-manrope text-[11px] font-semibold uppercase tracking-widest mt-1">Blogs</span>
+</a>
+</nav>
+<!-- Kinetic Background Elements -->
+<div class="fixed top-0 right-0 -z-10 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/3"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-[800px] h-[800px] bg-secondary/5 blur-[150px] rounded-full -translate-x-1/3 translate-y-1/3"></div>
+</body></html>
